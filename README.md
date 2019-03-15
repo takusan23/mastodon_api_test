@@ -1,0 +1,2 @@
+# mastodon_api_test
+JSでMastodonにPOSTするときローカルだと422返すのでgithub.ioに上げてテスト
