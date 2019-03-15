@@ -16,13 +16,13 @@
 
 <script>
         function postTootAction() {
-            alert(document.getElementById('access_token').innerText);
+            alert(document.getElementById('access_token').value);
             //url
             var xhr = new XMLHttpRequest();
             xhr.addEventListener("load", function (event) {
                 // xmlHttpRequest.responseにレスポンスが入っています
             }, false);
-            xhr.open("POST", 'https://friends.nico/api/v1/statuses/?access_token='+ document.getElementById('access_token').innerText);
+            xhr.open("POST", 'https://friends.nico/api/v1/statuses/?access_token='+ document.getElementById('access_token').value);
             xhr.responseType = "json";
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
             xhr.send("status=" + encodeURIComponent("テスト") + "&visibility=unlisted");
